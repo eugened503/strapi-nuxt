@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "socials",
+  "info": {
+    "name": "social"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link_vk": {
+      "type": "string"
+    },
+    "link_in": {
+      "type": "string"
+    },
+    "link_inst": {
+      "type": "string"
+    },
+    "profile": {
+      "via": "socials",
+      "model": "profile"
+    }
+  }
+}

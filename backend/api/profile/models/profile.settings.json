@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "biography": {
+      "type": "text"
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "city": {
+      "type": "string"
+    },
+    "socials": {
+      "via": "profile",
+      "collection": "social"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
